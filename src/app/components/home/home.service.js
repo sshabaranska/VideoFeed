@@ -8,11 +8,11 @@
     /* ngInject */
     function homeService($http, API_URL) {
         return {
-            getVideos: getVideos
+            queryVideos: queryVideos
         };
 
-        function getVideos() {
-            return $http.get(API_URL + '');
+        function queryVideos(id) {
+            return $http.get(API_URL);
         };
     }
 })();

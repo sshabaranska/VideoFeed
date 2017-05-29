@@ -1,4 +1,19 @@
 <md-content class="container">
+    <div layout-gt-xs="row">
+      <div flex-gt-xs>
+        <form ng-submit="filter($event)" name="form" novalidate layout-wrap layout="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Filter</label>
+            <md-select ng-model="videoTypes">
+              <md-option ng-repeat="type in videoTypes" value="{{type.id}}">
+                {{type.value}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+          <md-button class="md-primary md-raised button" ng-click="filter(videoTypes)">Filter</md-button>
+        </form>
+      </div>
+    </div>
     <md-card ng-repeat="v in viewVideoList">
       <md-card-header>
         <md-card-header-text>
