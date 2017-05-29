@@ -6,13 +6,13 @@
         .factory('homeService', homeService);
 
     /* ngInject */
-    function homeService($http, API_URL) {
+    function homeService($http) {
         return {
             queryVideos: queryVideos
         };
 
-        function queryVideos(id) {
-            return $http.get(API_URL);
+        function queryVideos(type) {
+            return $http.get('/videos/' + type);
         };
     }
 })();

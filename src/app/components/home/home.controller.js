@@ -18,6 +18,7 @@
         function _init() {
             homeService.queryVideos($scope.searchType)
                 .then(function(res) {
+
                     res.data.items.forEach(function(item) {
                         var viewVideo = $scope._createVideoObject(item);
                         $scope.viewVideoList.push(viewVideo);
@@ -44,9 +45,8 @@
             return obj;
         }
 
-        function filter (id) {
+        function filter () {
             $scope.viewVideoList = [];
-            $scope.searchType = id;
             $scope._init();
         }
 

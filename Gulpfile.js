@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch');
 
 var development = environments.development;
-var production = environments.production;
+//var production = environments.production;
 environments.current(development);
 
 var destination = environments.production() ? config.release : config.dev;
@@ -74,4 +74,3 @@ function buildStyles() {
         .pipe(concat('app.css'))
         .pipe(gulp.dest(destination.stylesheets));
 }
-
