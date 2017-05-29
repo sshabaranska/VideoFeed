@@ -1,0 +1,9 @@
+.navbar {
+    background-color:rgba(26, 38, 52, 0.6);
+    border-bottom: 3px solid darkGrey;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 3rem;
+}
