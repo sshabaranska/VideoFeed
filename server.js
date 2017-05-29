@@ -25,12 +25,10 @@ function queryVideos(r, type) {
     unirest.get('https://cdn.playbuzz.com/content/feed/items')
         .end(function(res) {
             if (res.error) {
-                console.log('err: ' + res.error);
                 r.send(res.error);
             } else {
                 var items = [];
                 var body = JSON.parse(res.body);
-                console.log('type2: ' + type);
                 if (type !== 'all') {
                     items = _.filter(body.items, function(item) { return item.source === type });
                     body.items = items;
@@ -43,9 +41,7 @@ function queryVideos(r, type) {
 // api ---------------------------------------------------------------------
 // get all videos
 app.get('/videos/:type', function (req, res) {
-    console.log('request: ' + req);
     var type = req.params.type;
-    console.log('type: ' + type);
     queryVideos(res, type);
 });
 
@@ -58,6 +54,3 @@ app.get('*', function (req, res) {
 // listen (start app with node server.js) ======================================
 app.listen(port);
 console.log("App listening on port " + port);
-
-
-//
