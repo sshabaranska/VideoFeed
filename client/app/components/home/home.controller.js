@@ -9,7 +9,9 @@
     function HomeController(homeService, $scope, VIDEO_TYPES, FB_URL, YOUTUBE_URL) {
         /** @public {Array<Object>} */
         $scope.viewVideoList = [];
+        /** @public {Array<Object>} */
         $scope.videoTypes = VIDEO_TYPES;
+        /** @public {String} */
         $scope.searchType = $scope.videoTypes[0].id;
         $scope._init = _init;
         $scope._createVideoObject = _createVideoObject;
@@ -34,13 +36,13 @@
             };
             switch(item.source) {
                 case 'youtube':
-                    obj.viewUrl = FB_URL + item.videoId;
+                    obj.viewUrl = item.videoId ? YOUTUBE_URL + item.videoId : null;
                     break;
                 case 'facebook':
-                    obj.viewUrl = YOUTUBE_URL + item.videoId;
+                    obj.viewUrl = item.videoId ? FB_URL + item.videoId : null;
                     break;
                 default:
-                    obj.viewUrl = item.url;
+                    obj.viewUrl = item.url ? item.url : null;
             };
             return obj;
         }

@@ -9,3 +9,13 @@ md-input-container.md-block {
     margin: 7px 0;
     width: 200px;
 }
+.video-error {
+	height: 300px;
+	text-align: center;
+	line-height: 300px;
+
+}
+.video-error:first-letter {
+	text-transform: uppercase;
+	
+}
