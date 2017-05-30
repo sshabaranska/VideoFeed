@@ -5,7 +5,6 @@ describe('Controller: Navigation Bar', function () {
     beforeEach(module('navigation-bar'));
 
     beforeEach(inject(function ($controller, $rootScope) {
-
         scope = $rootScope.$new();
         // Instantiate the controller with an object of the dependencies
         ctrl = $controller('NavigationBarController', {
@@ -13,7 +12,7 @@ describe('Controller: Navigation Bar', function () {
         });
     }));
 
-    describe('NavigationBarController Title', function () {
+    describe('NavigationBar Controller Title', function () {
         it('should have title defined', function () {
             expect(scope.title).toBeDefined();
             expect(scope.title).toEqual('VIDEO FEED');

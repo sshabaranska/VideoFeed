@@ -26,7 +26,7 @@ module.exports = function (config) {
             'dev/app/**/*.js',
             'dev/app/**/*.js',
             'dev/app/templates.js',
-            'dev/app/**/*.spec.js'
+            'dev/test/**/*.spec.js'
         ],
 
         // list of files to exclude

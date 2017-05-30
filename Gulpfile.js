@@ -27,6 +27,7 @@ gulp.task('watch', function() {
     gulp.watch(config.sources.scripts, buildScripts);
     gulp.watch(config.sources.templates, buildTemplates);
     gulp.watch(config.sources.stylesheets, buildStyles);
+    gulp.watch(config.sources.test, buildTest);
 });
 
 function clean() {
@@ -45,7 +46,8 @@ function buildIndex() {
         .pipe(inject(buildScripts(), { ignorePath:destination.index, addRootSlash:false }))
         .pipe(inject(buildTemplates(), { ignorePath:destination.index, addRootSlash:false, name: 'templates' }))
         .pipe(inject(buildStyles(), { ignorePath:destination.index, addRootSlash:false}))
-        .pipe(gulp.dest(destination.index));
+        .pipe(gulp.dest(destination.index))
+        .pipe(environments.development(inject(buildTest(), { ignorePath:destination.index, addRootSlash:false, name: 'test'})));
 }
 
 function buildScripts() {
@@ -74,3 +76,14 @@ function buildStyles() {
         .pipe(concat('app.css'))
         .pipe(gulp.dest(destination.stylesheets));
 }
+
+function buildTest() {
+    return gulp.src(config.sources.test)
+        .pipe(gulp.dest(destination.test));
+}
+
+
+
+
+
+

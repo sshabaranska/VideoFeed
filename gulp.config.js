@@ -1,14 +1,15 @@
 module.exports = function() {
     return {
         sources: {
-            index: 'src/index.html',
-            scripts: 'src/app/**/*.js',
+            index: 'client/index.html',
+            scripts: 'client/app/**/!(*.spec)*.js',
+            test: 'client/app/**/*.spec.js',
             stylesheets: [
                 'node_modules/angular-material/angular-material.css',
-                'src/app/app.css',
-                'src/app/**/*.css'
+                'client/app/app.css',
+                'client/app/**/*.css'
             ],
-            templates: 'src/app/**/*.html',
+            templates: 'client/app/**/*.html',
             vendors: [
                 'node_modules/angular/angular.js',
                 'node_modules/angular-sanitize/angular-sanitize.js',
@@ -25,7 +26,9 @@ module.exports = function() {
             less: 'dev/less',
             stylesheets: 'dev/stylesheets',
             templates: 'dev/app',
-            vendors: 'dev/vendor'
+            vendors: 'dev/vendor',
+            test: 'dev/test'
+
         },
         release: {
             index: 'release',
