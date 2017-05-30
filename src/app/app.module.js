@@ -4,7 +4,6 @@ angular
         'ui.router',
         'ngSanitize',
         'ngMaterial',
-
         'shared',
         //inject here your components
         'home',

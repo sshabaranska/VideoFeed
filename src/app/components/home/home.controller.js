@@ -6,7 +6,7 @@
         .controller('HomeController', HomeController);
 
     /* ngInject */
-    function HomeController($scope, homeService, VIDEO_TYPES, FB_URL, YOUTUBE_URL) {
+    function HomeController(homeService, $scope, VIDEO_TYPES, FB_URL, YOUTUBE_URL) {
         /** @public {Array<Object>} */
         $scope.viewVideoList = [];
         $scope.videoTypes = VIDEO_TYPES;
