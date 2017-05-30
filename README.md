@@ -9,18 +9,17 @@ run: $ gulp - to create "dev" folder<br>
 
 # Running localy
 
-Install Python<br>
-$ cd VideoFeed<br>
-$ cd server<br>
+$ cd VideoFeed/server<br>
 run: $ node server.js<br>
+Open in browser: http://localhost:8088
+
 <br>
 Run watcher:<br>
 $ cd VideoFeed<br>
 $ gulp watch<br>
-Open in browser: http://localhost:8088<br>
 <br>
 Run tests:<br>
-Install Karma
+Install Karma<br>
 $ cd VideoFeed<br>
 $ karma start<br>
 <br>
