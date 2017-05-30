@@ -3,7 +3,6 @@
       <div flex-gt-xs>
         <form ng-submit="filter($event)" name="form" novalidate layout-wrap layout="row">
           <md-input-container class="md-block" flex-gt-sm>
-            <label>Filter</label>
             <md-select ng-model="searchType">
               <md-option ng-repeat="type in videoTypes" value="{{type.id}}">
                 {{type.value}}
