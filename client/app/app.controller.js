@@ -6,5 +6,5 @@
         .controller('AppController', AppController);
 
     /* ngInject */
-    function AppController($scope, $states) {}
+    function AppController($scope, $states) {};
 })();

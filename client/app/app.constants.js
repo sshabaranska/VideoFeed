@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .constant('VIDEO_TYPES', [
+        .constant('VIDEO_SOURCES', [
             {
                 value: 'All',
                 id: 'all'

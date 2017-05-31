@@ -6,11 +6,11 @@
         .controller('HomeController', HomeController);
 
     /* ngInject */
-    function HomeController(homeService, $scope, VIDEO_TYPES, FB_URL, YOUTUBE_URL) {
+    function HomeController(homeService, $scope, VIDEO_SOURCES, FB_URL, YOUTUBE_URL) {
         /** @public {Array<Object>} */
         $scope.viewVideoList = [];
         /** @public {Array<Object>} */
-        $scope.videoTypes = VIDEO_TYPES;
+        $scope.videoTypes = VIDEO_SOURCES;
         /** @public {String} */
         $scope.searchType = $scope.videoTypes[0].id;
         $scope._init = _init;

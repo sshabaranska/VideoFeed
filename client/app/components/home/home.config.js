@@ -8,7 +8,7 @@
     /* ngInject */
     function config($stateProvider) {
         $stateProvider.state('home', {
-            url: '^/',
+            url: '/',
             views: {
                 content: {
                     templateUrl: 'components/home/home.html',

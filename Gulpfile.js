@@ -81,9 +81,3 @@ function buildTest() {
     return gulp.src(config.sources.test)
         .pipe(gulp.dest(destination.test));
 }
-
-
-
-
-
-

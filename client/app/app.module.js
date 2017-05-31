@@ -8,6 +8,5 @@ angular
         'shared',
         //inject here your components
         'home',
-
         'templates'
     ]);
